@@ -26,7 +26,9 @@ from LOCAL.localisation import info_text, spam_notice, help_text, DEV, source_te
 async def start(event):
     await event.reply(f'{st}', 
                       buttons=[
-                              [Button.inline("Menu", data="menu")]
+                              [Button.inline("Menu", data="menu")],
+                              [Button.url("Updates", url="https://t.me/REX_BOTZ"),
+                               Button.url("Support", url="https://t.me/REX_Bots_Support")]
                               ])
     tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
     await Drone.send_message(int(ACCESS_CHANNEL), f'{tag} started the BOT')
@@ -39,7 +41,7 @@ async def menu(event):
 async def info(event):
     await event.edit(f'**ℹ️NFO:**\n\n{info_text}',
                     buttons=[[
-                         Button.inline("Menu", data="menu")]
+                         Button.inline("Menu", data="menu")],
                          [
                          Button.url("Updates", url="https://t.me/REX_BOTZ"),
                          Button.url("Support", url="https://t.me/REX_Bots_Support")]])
