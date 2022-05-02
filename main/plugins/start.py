@@ -42,7 +42,7 @@ async def info(event):
                          Button.inline("Menu", data="menu")]
                          [
                          Button.inline("Updates", url="https://t.me/REX_BOTZ"),
-                         Button.inline(Support", url="https://t.me/REX_Bots_Support")])
+                         Button.inline("Support", url="https://t.me/REX_Bots_Support")])
     
 @Drone.on(events.callbackquery.CallbackQuery(data="notice"))
 async def notice(event):
