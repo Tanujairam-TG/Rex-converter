@@ -24,7 +24,7 @@ from LOCAL.localisation import info_text, spam_notice, help_text, DEV, source_te
 
 @Drone.on(events.NewMessage(incoming=True, pattern="/start"))
 async def start(event):
-    await event.reply(f'{st}', 
+    await event.reply(f'{st}'.format(message.from_user.mention)), 
                       buttons=[
                               [Button.inline("Menu.", data="menu")]
                               ])
