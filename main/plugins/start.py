@@ -29,13 +29,7 @@ async def start(event):
                               [Button.inline("Menu", data="help")],
                               [Button.url("Updates", url="https://t.me/REX_BOTZ"),
                                Button.url("Support", url="https://t.me/REX_Bots_Support")]
-                              ])  
-@Drone.on(events.callbackquery.CallbackQuery(data="menu"))
-async def menu(event):
-    await event.reply(f'{mt}', 
-                      buttons=[
-                              [Button.inline("helo", data="helo")]]) 
-    
+                              ])
 @Drone.on(events.callbackquery.CallbackQuery(data="info"))
 async def info(event):
     await event.edit(f'**ℹ️NFO:**\n\n{info_text}',
